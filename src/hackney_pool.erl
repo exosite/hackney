@@ -477,7 +477,7 @@ cancel_timer(Socket, Timer) ->
       receive
         {timeout, Socket} -> ok
       after
-        100 -> 
+        0 ->
           %% Safety timeout - if message doesn't arrive, continue anyway
           ok
       end;
